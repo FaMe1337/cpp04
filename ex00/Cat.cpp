@@ -10,4 +10,34 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat_hpp"
+#include "Cat.hpp"
+
+Cat::Cat() : Animal()
+{
+	setType("Cat");
+	std::cout << "Default Cat Constructor" << std::endl;
+}
+
+Cat::~Cat()
+{
+	std::cout << "Default Cat Destructor" << std::endl;
+}
+
+
+Cat::Cat(const Cat &copy) : Animal(copy)
+{
+	std::cout << "Copy Cat Contructor" << std::endl;
+}
+
+Cat &Cat::operator=(const Cat& other)
+{
+    if (this != &other){
+		Animal::operator=(other);
+	}
+	return (*this);
+}
+
+void Cat::makeSound() const
+{
+	std::cout << "Meoooowww!" << std::endl;
+}

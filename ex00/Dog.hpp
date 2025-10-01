@@ -13,16 +13,16 @@
 #ifndef DOG_HPP
 #define DOG_HPP
 
-#include "Animal_hpp"
+#include "Animal.hpp"
 
-class Dog
+class Dog : public Animal
 {
 	public:
 			Dog();
-			~Dog()
+			~Dog();
 			Dog(const Dog& other);
 			Dog& operator=(const Dog& other);
-			virtual void makeSound();
+			virtual void makeSound() const;
 };
 
 #endif

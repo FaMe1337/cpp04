@@ -11,18 +11,18 @@
 /* ************************************************************************** */
 
 #ifndef WRONGCAT_HPP
-#define WRONCAT_HPP
+#define WRONGCAT_HPP
 
-#include "WrongAnimal_hpp"
+#include "WrongAnimal.hpp"
 
 class WrongCat : public WrongAnimal
 {
 	public:
 			WrongCat();
-			~WrongCat()
+			~WrongCat();
 			WrongCat(const WrongCat& other);
 			WrongCat& operator=(const WrongCat& other);
-			void makeSound();
+			void makeSound() const;
 };
 
 #endif

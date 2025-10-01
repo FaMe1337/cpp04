@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal_hpp"
+#include "Animal.hpp"
 
-Animal::Animal(): type("Animal")
+Animal::Animal(): _type("Animal")
 {
 	std::cout << "Default Animal Constructor" << std::endl;
 }
@@ -41,7 +41,12 @@ std::string Animal::getType() const
 	return (_type);
 }
 
+void Animal::setType(std::string type)
+{
+	_type = type;
+}
+
 void Animal::makeSound() const
 {
-	std::cout << "Makes Animal sounds" << std::endl;
+	std::cout << "make Animal sounds" << std::endl;
 }

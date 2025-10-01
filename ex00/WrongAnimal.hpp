@@ -19,14 +19,15 @@ class WrongAnimal
 {
 	public:
 			WrongAnimal();
-			~WrongAnimal()
-			WrongAnimal(const Animal& other);
-			WrongAnimal& operator=(const Animal& other);
-			std::string setType();
-			void makeSound();
+			~WrongAnimal();
+			WrongAnimal(const WrongAnimal& copy);
+			WrongAnimal& operator=(const WrongAnimal& other);
+			std::string getType() const;
+			void setType(std::string type);
+			void makeSound() const;
 
 	protected:
-		std:string _type;
+		std::string _type;
 };
 
 #endif

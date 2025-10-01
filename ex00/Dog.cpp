@@ -10,4 +10,33 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog_hpp"
+#include "Dog.hpp"
+
+Dog::Dog(): Animal()
+{
+	setType("Dog");
+	std::cout << "Default Dog Constructor" << std::endl;
+}
+
+Dog::~Dog()
+{
+	std::cout << "Default Dog Destructor" << std::endl;
+}
+
+
+Dog::Dog(const Dog &copy) : Animal(copy)
+{
+	std::cout << "Copy Dog Contructor" << std::endl;
+}
+
+Dog &Dog::operator=(const Dog &other)
+{
+	if (this != &other) 
+        Animal::operator=(other);       
+	return (*this);
+}
+
+void Dog::makeSound() const
+{
+	std::cout << "Woof Woof!" << std::endl;
+}

@@ -48,7 +48,7 @@ std::string Brain::getIdea(int n)
 	}
 	if (_ideas[n].empty())
 	{
-		std::cout << "*blank*\n";
+		std::cout << "*blank*";
 		return "";
 	}
 	return _ideas[n];
