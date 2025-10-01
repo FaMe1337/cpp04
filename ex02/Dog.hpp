@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/14 13:58:12 by marvin            #+#    #+#             */
-/*   Updated: 2025/09/14 13:58:12 by marvin           ###   ########.fr       */
+/*   Created: 2025/09/14 13:58:02 by marvin            #+#    #+#             */
+/*   Updated: 2025/09/14 13:58:02 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-#define WRONGCAT_HPP
+#ifndef DOG_HPP
+#define DOG_HPP
 
-#include "WrongAnimal.hpp"
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-class WrongCat : public WrongAnimal
+class Dog : public Animal
 {
 	public:
-			WrongCat();
-			~WrongCat();
-			WrongCat(const WrongCat& copy);
-			WrongCat& operator=(const WrongCat& other);
+			Dog();
+			~Dog();
+			Dog(const Dog& copy);
+			Dog& operator=(const Dog& other);
 			void makeSound() const;
+			Brain& getBrain() const;
+			
+	private:
+			Brain* _brain;	
 };
 
 #endif
